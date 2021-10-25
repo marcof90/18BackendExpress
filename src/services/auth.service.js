@@ -30,7 +30,11 @@ const authService = {
         try {
             let hash = await bcrypt.hash(userData.password, 10).then(res => res)
             userData.password = hash
-            await userData.save()
+            // await userData.save()
+            return {
+                userData,
+                code: 200,
+            }
             let token = await this.signToken(userData._id)
             return {
                 code: 200,
