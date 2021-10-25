@@ -37,7 +37,10 @@ const authService = {
                 token
             }
         } catch (error) {
-            return error
+            return {
+                code: 500,
+                error
+            }
         }
     }
 }
