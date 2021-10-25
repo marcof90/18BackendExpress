@@ -15,6 +15,9 @@ mongoose.connect(process.env.DB_STRING)
 //middlewares
 app.use(morgan('dev'))
 app.use(cors())
+app.use(express.urlencoded({
+    extended: false
+}))
 
 //rutas
 app.use('/auth', authRoutes)
