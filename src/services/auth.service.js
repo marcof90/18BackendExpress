@@ -4,7 +4,7 @@ const bcrypt = require('bcrypt')
 const msg = require('../helpers/messages')
 
 const authService = {
-    signToken: (id)=>{
+    signToken: async (id)=>{
         return jwt.sign({ id }, proccess.env.JWT_SECRET, {
             expiresIn: 60 * 60 * 24 * 365
         })
