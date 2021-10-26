@@ -8,9 +8,10 @@ router.post('/register', async (req, res)=>{
     try {
         const user = new User(req.body)
         const token = await authService.register(user)
-        res.status(token.code).json(token);
+        res.status(token.code).json({'token': token});
     } catch (error) {
-        res.status(500).json({error})
+        // console.log(error)
+        res.status(500).json({'error':error})
     }
 })
 
@@ -21,9 +22,10 @@ router.post('/login', async (req, res)=>{
             res.status(400).json(msg.fieldsRequired)
         }
         const token = await authService.login(req.body)
-        res.status(token.code).json(token)
+        res.status(token.code).json({'token':token})
     } catch (error) {
-        res.send(error)
+        // res.send(error)
+        res.status(500).json({'error':error})
     }
 })
 
