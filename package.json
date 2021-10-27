@@ -8,10 +8,22 @@
     "start": "node src/app.js",
     "dev": "nodemon src/app.js"
   },
+  "apidoc": {
+    "name": "Backend Finapp",
+    "version": "0.0.1",
+    "description": "Documentación en linea de los endpoints del backend",
+    "title": "Documentación API Finapp",
+    "url": "https://mintic-18.herokuapp.com/documentation",
+    "header": {
+      "title": "Resume",
+      "filename": "header.md"
+    }
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "apidoc": "^0.50.1",
     "bcrypt": "^5.0.1",
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
