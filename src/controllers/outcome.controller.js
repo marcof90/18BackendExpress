@@ -12,7 +12,7 @@ const outcomeController = {
     },
     list: async function(req, res){
         try {
-            const list = await Outcome.find()
+            const list = await Outcome.find({user:req.body.user})
             res.status(200).json({"outcomes":list})
         } catch (error) {
             res.status(500).json({"error":error})

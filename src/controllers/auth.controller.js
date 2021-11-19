@@ -2,7 +2,7 @@ const User = require('../models/user')
 const authService = require('../services/auth.service')
 const msg = require('../helpers/messages')
 const { validationResult } = require('express-validator') 
-
+ 
 const authController = {   
     async login(req, res){
         try {
@@ -18,7 +18,7 @@ const authController = {
         }
     },
     async register(req, res){
-        const errors = validationResult(req)
+        const errors = validationResult(req) 
         if(!errors.isEmpty()){
             return res.status(422).json({errors: errors.array()})
         }
