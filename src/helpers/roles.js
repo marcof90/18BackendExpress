@@ -8,6 +8,6 @@ const roles = {
     regular:{
         levelAccess: 1
     }
-}
+} 
 
 module.exports = roles

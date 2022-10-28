@@ -18,7 +18,6 @@ const authRoutes = require('./routes/auth.routes')
 const incomeRoutes = require('./routes/income.routes')
 const outcomeRoutes = require('./routes/outcome.routes')
 require('dotenv').config()
-
 //configuraciones
 app.set('port', process.env.PORT || 3000)
 mongoose.connect(process.env.DB_STRING)
